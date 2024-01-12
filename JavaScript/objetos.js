@@ -4,10 +4,22 @@ let objeto = {
     apellido: 'mercurio',
     correo: 'jdsjs@gmail.com',
     edad: 22,
+    idioma: 'es',
+    get lang() {
+        return this.idioma.toUpperCase();
+    },
+    set lang(lang) {
+        this.idioma = lang.toUpperCase();
+    },
     nombreC: function () {
         return this.nombre + ' ' + this.apellido;
     }
 }
+
+console.log(persona.lang);
+
+persona.lang = 'us';
+console.log(persona.idioma);
 console.log(persona.nombre);
 console.log(persona.edad);
 console.log(persona.apellido);
